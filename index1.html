@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head> </head>
+
+<body>
+
+
+<div>
+<p>num1<input type="text" id = "1" ></p>
+<p>num2<input type="text" id = "2" ></p>
+<p>num3<input type="text" id = "3" ></p>
+<button type="button" onclick= "sqaure();"> square number </button>
+<button type="button" onclick= "add();"> add numbers </button>
+</div>
+
+<div>
+<p>name<input type="text" id = "name" ></p>
+<p>age<input type="text" id = "age" ></p>
+<p>occupation<input type="text" id = "occ" ></p>
+<button type="button" onclick= "create_p();"> create </button>
+<button type="button" onclick= "add1();"> wait 1 year </button>
+<button type="button" onclick= "check_age();"> between 20 and 40? </button>
+</div>
+
+<div>
+<button type="button" onclick= "elliot(mynameis);"> display elliot </button>
+<button type="button" onclick= "capital(mynameis);"> display capital </button>
+</div>
+
+<div>
+<button type="button" onclick= "displaything(things);"> display things </button>
+<button type="button" onclick= "addthing(things);"> add a thing </button>
+<button type="button" onclick= "removething(things);"> remove a thing </button>
+</div>
+
+<div>
+<button type="button" onclick= "itteration1();"> itteration1 </button>
+<button type="button" onclick= "itteration2();"> itteration2 </button>
+<button type="button" onclick= "itteration3();"> itteration3 </button>
+<p>numer to divide by 3<input type="text" id = "num/3" ></p>
+<button type="button" onclick= "itteration4();"> itteration4 </button>
+</div>
+
+</body>
+
+<script> type = "type/javascript"
+
+var person ={name : " ", age : 0, occupation : ""};
+
+var mynameis = "\"my name is elliot\""
+
+var things = ["thing1", "thing2", "thing3"];
+
+function sqaure() {
+var num1 = document.getElementById("1").value
+alert(num1*num1)
+return num1*num1;
+
+}
+
+
+function add() {
+var num1 = document.getElementById("1").value * 1
+var num2 = document.getElementById("2").value * 1
+var num3 = document.getElementById("3").value * 1
+alert(num1+num2+num3)
+return num1+num2+num3;
+
+}
+
+function create_p() {
+person.name = document.getElementById("name").value
+person.age = document.getElementById("age").value * 1
+person.occupation = document.getElementById("occ").value
+alert("name: " +person.name + "\nage: " + person.age + "\noccupation: " + person.occupation)
+
+}
+
+function add1() {
+person.age ++
+alert("name: " +person.name + "\nage: " + person.age + "\noccupation: " + person.occupation)
+
+}
+
+function elliot(mynameis) {
+alert(mynameis)
+
+}
+
+function capital(mynameis) {
+var mid = mynameis;
+alert(mid.toUpperCase());
+
+}
+
+function removething(things) {
+things.pop();
+
+}
+function addthing(things) {
+things.push("thing"+(things.length+1));
+
+}
+function displaything(things) {
+alert(things);
+
+}
+
+function check_age() {
+if (person.age > 20 && person.age < 40) {
+alert("true");
+
+} else { 
+alert("false")
+}
+}
+
+function itteration1() {
+for (i = 0; i < 11; i++) { 
+    console.log(i);
+}
+}
+
+function itteration2() {
+for (i = 0; i < 11; i++) {
+if(i%2 === 0) 
+    console.log(i);
+}
+}
+function itteration3() {
+for (i = 0; i < 101; i++) {
+	if(i%3 ===0 && i%5 ===0  ) { 
+    console.log("fizzbuzz");
+	} else if (i%5 ===0) {
+	console.log("buzz");
+	} else if (i%3 ===0) {
+	console.log("fizz");
+	} else {
+	console.log(i);
+	}
+}
+
+
+function itteration4() {
+
+var inputnum = document.getElementById("num/3").value * 1
+
+while (inputnum != 1) { 
+    switch(inputnum % 3) {
+	case 0:
+	inputnum = inputnum/3;
+	console.log("number can be divided by three, new number = " + inputnum);
+	break;
+	case 1:
+	inputnum --;
+	inputnum = inputnum/3;
+	console.log("number - 1 can be divided by three, new number = " + inputnum);
+	break;
+	case 2:
+	inputnum ++;
+	inputnum = inputnum/3;
+	console.log("number + 1 can be divided by three, new number = " + inputnum);
+	break;
+}
+}
+}
+}
+</script>
+</html>

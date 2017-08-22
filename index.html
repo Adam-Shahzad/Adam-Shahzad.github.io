@@ -1,169 +1,211 @@
 <!DOCTYPE html>
-<html>
-<head> </head>
+<html lang="en">
 
-<body>
+  <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<div>
-<p>num1<input type="text" id = "1" ></p>
-<p>num2<input type="text" id = "2" ></p>
-<p>num3<input type="text" id = "3" ></p>
-<button type="button" onclick= "sqaure();"> square number </button>
-<button type="button" onclick= "add();"> add numbers </button>
-</div>
+    <title>Creative - Start Bootstrap Theme</title>
 
-<div>
-<p>name<input type="text" id = "name" ></p>
-<p>age<input type="text" id = "age" ></p>
-<p>occupation<input type="text" id = "occ" ></p>
-<button type="button" onclick= "create_p();"> create </button>
-<button type="button" onclick= "add1();"> wait 1 year </button>
-<button type="button" onclick= "check_age();"> between 20 and 40? </button>
-</div>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<div>
-<button type="button" onclick= "elliot(mynameis);"> display elliot </button>
-<button type="button" onclick= "capital(mynameis);"> display capital </button>
-</div>
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-<div>
-<button type="button" onclick= "displaything(things);"> display things </button>
-<button type="button" onclick= "addthing(things);"> add a thing </button>
-<button type="button" onclick= "removething(things);"> remove a thing </button>
-</div>
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-<div>
-<button type="button" onclick= "itteration1();"> itteration1 </button>
-<button type="button" onclick= "itteration2();"> itteration2 </button>
-<button type="button" onclick= "itteration3();"> itteration3 </button>
-<p>numer to divide by 3<input type="text" id = "num/3" ></p>
-<button type="button" onclick= "itteration4();"> itteration4 </button>
-</div>
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
 
-</body>
+  </head>
 
-<script> type = "type/javascript"
+  <body id="page-top">
 
-var person ={name : " ", age : 0, occupation : ""};
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Project List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">about me</a>
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-var mynameis = "\"my name is elliot\""
-
-var things = ["thing1", "thing2", "thing3"];
-
-function sqaure() {
-var num1 = document.getElementById("1").value
-alert(num1*num1)
-return num1*num1;
-
-}
-
-
-function add() {
-var num1 = document.getElementById("1").value * 1
-var num2 = document.getElementById("2").value * 1
-var num3 = document.getElementById("3").value * 1
-alert(num1+num2+num3)
-return num1+num2+num3;
-
-}
-
-function create_p() {
-person.name = document.getElementById("name").value
-person.age = document.getElementById("age").value * 1
-person.occupation = document.getElementById("occ").value
-alert("name: " +person.name + "\nage: " + person.age + "\noccupation: " + person.occupation)
-
-}
-
-function add1() {
-person.age ++
-alert("name: " +person.name + "\nage: " + person.age + "\noccupation: " + person.occupation)
-
-}
-
-function elliot(mynameis) {
-alert(mynameis)
-
-}
-
-function capital(mynameis) {
-var mid = mynameis;
-alert(mid.toUpperCase());
-
-}
-
-function removething(things) {
-things.pop();
-
-}
-function addthing(things) {
-things.push("thing"+(things.length+1));
-
-}
-function displaything(things) {
-alert(things);
-
-}
-
-function check_age() {
-if (person.age > 20 && person.age < 40) {
-alert("true");
-
-} else { 
-alert("false")
-}
-}
-
-function itteration1() {
-for (i = 0; i < 11; i++) { 
-    console.log(i);
-}
-}
-
-function itteration2() {
-for (i = 0; i < 11; i++) {
-if(i%2 === 0) 
-    console.log(i);
-}
-}
-function itteration3() {
-for (i = 0; i < 101; i++) {
-	if(i%3 ===0 && i%5 ===0  ) { 
-    console.log("fizzbuzz");
-	} else if (i%5 ===0) {
-	console.log("buzz");
-	} else if (i%3 ===0) {
-	console.log("fizz");
-	} else {
-	console.log(i);
-	}
-}
+    <header class="masthead">
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1 id="homeHeading">Adam Shahzad</h1>
+          <hr>
+          <p>Hey, wanna look at all the projects I've done?</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">Click Here</a>
+        </div>
+      </div>
+    </header>
 
 
-function itteration4() {
 
-var inputnum = document.getElementById("num/3").value * 1
+    <section class="p-0" id="portfolio">
+      <div class="container-fluid">
+        <div class="row no-gutter popup-gallery">
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Simple astroids game
+                  </div>
+                  <div class="project-name">
+                    Developed using the unity engine
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Facial recognition using neural networks
+                  </div>
+                  <div class="project-name">
+                    lol I hate matlab
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Store Automation
+                  </div>
+                  <div class="project-name">
+                    Created a network of raspberry pi devices to control home apliences 
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Student regestrations system
+                  </div>
+                  <div class="project-name">
+                    Look, I'm going to level with you. I have no real idea what was happening during that project, but I know it worked
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Media Player
+                  </div>
+                  <div class="project-name">
+                    Used frameworks to get a create a simple VLC player, it could only play 1 movie though... it was mad max
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Greenpower Formula 24+
+                  </div>
+                  <div class="project-name">
+                    I made a race car, nothing to do with software development but I don't have many things to be proud of
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-while (inputnum != 1) { 
-    switch(inputnum % 3) {
-	case 0:
-	inputnum = inputnum/3;
-	console.log("number can be divided by three, new number = " + inputnum);
-	break;
-	case 1:
-	inputnum --;
-	inputnum = inputnum/3;
-	console.log("number - 1 can be divided by three, new number = " + inputnum);
-	break;
-	case 2:
-	inputnum ++;
-	inputnum = inputnum/3;
-	console.log("number + 1 can be divided by three, new number = " + inputnum);
-	break;
-}
-}
-}
-}
-</script>
+    <div class="call-to-action bg-dark">
+      <div class="container text-center">
+        <h2>wanna check my linked in</h2>
+        <a class="btn btn-default btn-xl sr-button" href="https://www.linkedin.com/">Click here!</a>
+      </div>
+    </div>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">I am a great coder, I love to code all day and all night</h2>
+            <hr class="primary">
+            <p> can I have a job now, pls</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x sr-contact"></i>
+            <p>123-456-6789</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+            <p>
+              <a href="mailto:your-email@your-domain.com">adam.shahzad@outlook.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+  </body>
+
 </html>
