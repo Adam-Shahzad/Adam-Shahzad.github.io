@@ -1,0 +1,82 @@
+<html>
+
+<head> 
+</head>
+
+<body>
+</body>
+
+<script> type = "type/javascript"
+
+//callback
+var cars =[];
+
+function log_cars(car_attributes){
+
+console.log(car_attributes)
+
+}
+
+function get_input(attributes, callback){
+
+cars.push(attributes);
+
+if (typeof callback === "function") {
+    callback(attributes);
+}
+
+}
+
+get_input({type: "BMW", colour : "black"},log_cars);
+
+
+// 3 ways to create objects
+// 1st 
+var employee = {name : "Dylan", age : 22};
+
+//2nd - prototype pattern
+function employee2(){};
+
+employee2.prototype.name = "David"
+employee2.prototype.age = 22;
+
+let david = new employee2();
+
+// 3rd - constructor pattern
+function employee3(name, age){
+    this.name = name;
+    this.age = age;
+}
+
+let adam = new employee3 ("adam", 21)
+
+
+// Combination Constructor/Prototype Pattern
+// used for encapsulation 
+
+function employee4(name,age){
+     this.name = name;
+    this.age = age;
+    this.jobs =[]
+}
+
+employee4.prototype = {
+
+    constructor : employee4,
+
+    saveJob:function(addJob){
+        this.jobs.push(addJob)
+    },
+
+    showNameAndJob(){
+    var job =this.jobs.length > 0 ?  this.jobs.join(","): "no jobs yet";
+    return this.name + "jobs" + job;
+    }
+}
+
+pro = new employee4("pro", 23);
+pro.saveJob("help adam code");
+pro.saveJob("do adams website for him");
+console.log(pro.showNameAndJob);
+</script>
+</html>

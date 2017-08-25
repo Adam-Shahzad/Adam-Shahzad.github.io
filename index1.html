@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head> </head>
+<head> 
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
 <body>
 
 
-<div>
-<p>num1<input type="text" id = "1" ></p>
-<p>num2<input type="text" id = "2" ></p>
-<p>num3<input type="text" id = "3" ></p>
+<div id = "div1">
+<p>num1 <input type="text" id = "1" ></p>
+<p>num2 <input type="text" id = "2" ></p>
+<p>num3 <input type="text" id = "3" ></p>
 <button type="button" onclick= "sqaure();"> square number </button>
 <button type="button" onclick= "add();"> add numbers </button>
 </div>
 
 <div>
-<p>name<input type="text" id = "name" ></p>
-<p>age<input type="text" id = "age" ></p>
-<p>occupation<input type="text" id = "occ" ></p>
+	<br>
+	-------------------------------------
+	<br>
+<p>name <input type="text" id = "name" ></p>
+<p>age <input type="text" id = "age" ></p>
+<p>occupation <input type="text" id = "occ" ></p>
 <button type="button" onclick= "create_p();"> create </button>
 <button type="button" onclick= "add1();"> wait 1 year </button>
 <button type="button" onclick= "check_age();"> between 20 and 40? </button>
 </div>
 
 <div>
+	<br>
+	-------------------------------------
+	<br>
 <button type="button" onclick= "elliot(mynameis);"> display elliot </button>
 <button type="button" onclick= "capital(mynameis);"> display capital </button>
 </div>
 
 <div>
+	<br>
+	-------------------------------------
+	<br>
 <button type="button" onclick= "displaything(things);"> display things </button>
 <button type="button" onclick= "addthing(things);"> add a thing </button>
 <button type="button" onclick= "removething(things);"> remove a thing </button>
 </div>
 
 <div>
+	<br>
+	-------------------------------------
+	<br>
 <button type="button" onclick= "itteration1();"> itteration1 </button>
 <button type="button" onclick= "itteration2();"> itteration2 </button>
 <button type="button" onclick= "itteration3();"> itteration3 </button>
-<p>numer to divide by 3<input type="text" id = "num/3" ></p>
+<p>numer to divide by 3 <input type="text" id = "num/3" ></p>
 <button type="button" onclick= "itteration4();"> itteration4 </button>
+</div>
+
+<div>
+	<br>
+	-------------------------------------
+	<br>
+<button type="button" onclick= "createp();"> create </button>
+<p>change <input type="text" id = "change" ></p>
+<button type="button" onclick= "appendp();"> append </button>
+<button type="button" onclick= "delp();"> delete </button>
+</div>
+
+<div>
+	<br>
+	-------------------------------------
+	<br>
+<p>tripple <input type="text" id = "trip" ></p>
+<button type="button" onclick= "triple();"> check for triple </button>
+	<br>
+	-------------------------------------
+	<br>
+</div>
+
+<div id = "div2" > Sqaud Name: </div>
+<div id = "div3"> Home City: </div>
+<div id = "div4"> Date Formed: </div>
+<div id = "div5"> Secret base: </div>
+<div id = "div6">Active:  </div>
+<div id = "div7">Member 1: </div>
+<div id = "div8"> Member 2: </div>
+<div id = "div9"> Member 3: </div>
+
+<br>
+	-------------------------------------
+<br>
+
+<div>
+	search <input type="text" id = "king_search" ></p>
+	<button type="button" onclick= "search()"> search </button>
+	<div id = "kingnm">name:  </div>
+	<div id = "kingcnt">country: </div>
+	<div id = "kinghs"> house: </div>
+	<div id = "kingyrs"> years: </div>
 </div>
 
 </body>
@@ -52,38 +109,38 @@ var mynameis = "\"my name is elliot\""
 var things = ["thing1", "thing2", "thing3"];
 
 function sqaure() {
-var num1 = document.getElementById("1").value
-alert(num1*num1)
+var num1 = document.getElementById("1").value;
+alert(num1*num1);
 return num1*num1;
 
 }
 
 
 function add() {
-var num1 = document.getElementById("1").value * 1
-var num2 = document.getElementById("2").value * 1
-var num3 = document.getElementById("3").value * 1
-alert(num1+num2+num3)
+var num1 = document.getElementById("1").value * 1;
+var num2 = document.getElementById("2").value * 1;
+var num3 = document.getElementById("3").value * 1;
+alert(num1+num2+num3);
 return num1+num2+num3;
 
 }
 
 function create_p() {
-person.name = document.getElementById("name").value
-person.age = document.getElementById("age").value * 1
-person.occupation = document.getElementById("occ").value
-alert("name: " +person.name + "\nage: " + person.age + "\noccupation: " + person.occupation)
+person.name = document.getElementById("name").value;
+person.age = document.getElementById("age").value * 1;
+person.occupation = document.getElementById("occ").value;
+alert("name: " +person.name + "\nage: " + person.age + "\noccupation: " + person.occupation);
 
 }
 
 function add1() {
-person.age ++
-alert("name: " +person.name + "\nage: " + person.age + "\noccupation: " + person.occupation)
+person.age ++;
+alert("name: " +person.name + "\nage: " + person.age + "\noccupation: " + person.occupation);
 
 }
 
 function elliot(mynameis) {
-alert(mynameis)
+alert(mynameis);
 
 }
 
@@ -97,10 +154,12 @@ function removething(things) {
 things.pop();
 
 }
+
 function addthing(things) {
 things.push("thing"+(things.length+1));
 
 }
+
 function displaything(things) {
 alert(things);
 
@@ -111,14 +170,16 @@ if (person.age > 20 && person.age < 40) {
 alert("true");
 
 } else { 
-alert("false")
+alert("false");
 }
+
 }
 
 function itteration1() {
 for (i = 0; i < 11; i++) { 
     console.log(i);
 }
+
 }
 
 function itteration2() {
@@ -126,25 +187,32 @@ for (i = 0; i < 11; i++) {
 if(i%2 === 0) 
     console.log(i);
 }
+
 }
+
 function itteration3() {
 for (i = 0; i < 101; i++) {
-	if(i%3 ===0 && i%5 ===0  ) { 
-    console.log("fizzbuzz");
-	} else if (i%5 ===0) {
-	console.log("buzz");
-	} else if (i%3 ===0) {
-	console.log("fizz");
-	} else {
-	console.log(i);
+	if (i%3 ===0 && i%5 ===0  ) { 
+    	console.log("fizzbuzz");
+	} 
+	else if (i%5 ===0) {
+		console.log("buzz");
+	} 
+	else if (i%3 ===0) {
+		console.log("fizz");
+	} 
+	else {
+		console.log(i);
 	}
+}
+
 }
 
 
 function itteration4() {
 
 var inputnum = document.getElementById("num/3").value * 1
-
+var counter = 0;
 while (inputnum != 1) { 
     switch(inputnum % 3) {
 	case 0:
@@ -162,8 +230,125 @@ while (inputnum != 1) {
 	console.log("number + 1 can be divided by three, new number = " + inputnum);
 	break;
 }
+
+counter ++;
+
+}
+
+console.log("number of iterations: " + counter);
+
+}
+
+
+function triple() {
+var trip_str = document.getElementById("trip").value;
+var tripnum = 0;
+for(i=0;i<trip_str.length-1;i++){
+if (trip_str.substr(i, 1) === trip_str.substr(i+1, 1) && trip_str.substr(i+1, 1) === trip_str.substr(i+2, 1)){
+tripnum ++;
 }
 }
+alert (tripnum);
 }
+
+function createp(){
+var para = document.createElement("p");
+var node = document.createTextNode("create new paragraph");
+para.appendChild(node);
+para.id = "para";
+
+var element = document.getElementById("div1");
+element.appendChild(para);
+}
+
+function appendp(){
+var newtext = document.getElementById("change").value;
+var node = document.createTextNode(newtext);
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+element.appendChild(para);
+}
+
+function delp(){
+var del = document.getElementById("para");
+document.getElementById("div1").removeChild(del);
+}
+
+// JSON1
+        var url = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json";
+        var request = new XMLHttpRequest();
+        request.open('GET', url);
+        request.responseType = 'json';
+        request.send();
+        request.onload = function() {
+            var reqData = request.response;
+            var squadName = document.createElement('squadName');
+            var homeTown = document.createElement('homeTown');
+            var formed = document.createElement('formed');
+            var secBase = document.createElement('secretBase');
+            var active = document.createElement('active');
+            var mem1 = document.createElement('mem1');
+            var mem2 = document.createElement('mem2');
+            var mem3 = document.createElement('mem3');
+            
+            squadName.textContent = reqData['squadName'];
+            homeTown.textContent = reqData['homeTown'];
+            formed.textContent = reqData['formed'];
+            secBase.textContent = reqData["secretBase"];
+            active.textContent = reqData['active'];
+            mem1.textContent = reqData['members'][0].name;
+            mem2.textContent = reqData['members'][1].name;
+            mem3.textContent = reqData['members'][2].name;
+            
+            document.getElementById("div2").appendChild(squadName); 
+            document.getElementById("div3").appendChild(homeTown);
+            document.getElementById("div4").appendChild(formed);
+            document.getElementById("div5").appendChild(secBase);
+            document.getElementById("div6").appendChild(active);
+            document.getElementById("div7").appendChild(mem1);
+            document.getElementById("div8").appendChild(mem2);
+            document.getElementById("div9").appendChild(mem3);
+            
+            
+        }
+
+
+
+			var king_name = document.createElement('king_name');
+            var king_cty = document.createElement('king_cty');
+            var king_hs = document.createElement('king_hs');
+            var king_yrs = document.createElement('king_yrs');
+	
+		var url2 = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json";
+        var request2 = new XMLHttpRequest();
+		var reqData2
+        request2.open('GET', url2);
+        request2.responseType = 'json';
+        request2.send();
+	
+        request2.onload = function() {
+			 reqData2 = request2.response;
+			 
+		}
+
+	function search() {
+		var king = reqData2.filter((d) => {
+			return d.nm === (document.getElementById("king_search").value);
+			});
+
+		king_name.textContent = king[0].nm;
+		king_cty.textContent = king[0].cty;
+		king_hs.textContent = king[0].hse;
+		king_yrs.textContent = king[0].yrs;
+
+		document.getElementById("kingnm").appendChild(king_name);
+        document.getElementById("kingcnt").appendChild(king_cty);
+        document.getElementById("kinghs").appendChild(king_hs);
+        document.getElementById("kingyrs").appendChild(king_yrs);
+			
+		}
+		
+
 </script>
 </html>

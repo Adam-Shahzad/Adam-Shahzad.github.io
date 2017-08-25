@@ -1,0 +1,91 @@
+<html>
+<head> 
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id = "add_car">
+    <button type="button" onclick= "create()"> create </button>
+    <p>make <input type="text" id = "make" ></p>
+    <p>type <input type="text" id = "type" ></p>
+    <p>miles <input type="text" id = "miles" ></p>
+    <p>regno <input type="text" id = "regno" ></p>
+</div>
+---------------------------------------------
+<div id = "add_fault">
+    <button type="button" onclick= "add_fault()"> add_fault </button>
+    <button type="button" onclick= "calculate_bill()"> calculate bill </button>
+    <p>fault <input type="text" id = "fault_selector" ></p>
+</div>
+</body>
+
+---------------------------------------------
+<div id = "remove_car">
+    <button type="button" onclick= "remover();"> remove car </button>
+    <p>regno <input type="text" id = "selector" ></p>
+</div>
+</body>
+---------------------------------------------
+<div id = "show_car">
+    <button type="button" onclick= "show_cars();"> show cars </button>
+    <p id = "show" > </p>
+</div>
+</body>
+
+<script> type = "type/javascript"
+var cars=[];
+
+function create() {
+var car ={car_model : " ", car_miles : 0, car_type : "miles" , car_regno: "", car_ID : 0, fault : []};
+
+car.car_miles = parseInt(document.getElementById("miles").value) ;
+car.car_type = document.getElementById("type").value;
+car.car_model = document.getElementById("make").value;
+car.car_regno = document.getElementById("regno").value;
+car.car_ID = cars.length;
+
+cars.push(car);
+console.log(cars);
+
+}
+
+function remover() {
+    var selected_car = cars.filter((d) => {
+			return d.car_regno === (document.getElementById("selector").value);
+			});
+
+    cars.splice(selected_car.car_ID, 1);
+}
+
+function show_cars() {
+    var para = document.createElement("p");
+    var node = document.createTextNode("")
+
+    for (i = 0; i <= cars.length; i++) {
+    node = document.createTextNode(" model: "+cars[i].car_model +", type: "+cars[i].car_type + ", RegNo: " + cars[i].car_regno);
+    para.appendChild(node);
+    var element = document.getElementById("show");
+    element.appendChild(para);
+}
+}
+function add_fault() {
+    var faults = document.getElementById("");
+
+    var selected_car2 = cars.find((d) => {
+			return d.car_regno === (document.getElementById("regno").value);
+			});
+
+    selected_car2.fault.push(document.getElementById("fault_selector").value);
+    console.log(cars);
+}
+
+function calculate_bill(){
+    var selectedcar3 = cars.find((a)=>{
+        return d.car_regno===(document.getElementById("regno").value);
+         });
+
+    alert("£" + selectedcar3.fault.length*50); 
+}
+</script> 
+
+</html>

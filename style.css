@@ -1,0 +1,25 @@
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    
+	display: table-cell;
+	text-align: center;
+	display: table-cell;
+    vertical-align: middle;
+	background-color:#a0ffb9;
+	border-style: double;
+	
+	
+}
+
+div {
+	
+}
